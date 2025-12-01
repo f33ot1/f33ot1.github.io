@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="dark">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Invoke methods from .NET Assemblies using Powershell and Reflection API | malicious unicorn</title>
+<meta name="keywords" content="reverse-engineering, malware, dotnet, windows, dnspy, powershell">
+<meta name="description" content="Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies">
+<meta name="author" content="">
+<link rel="canonical" href="https://f33ot1.github.io/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://f33ot1.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://f33ot1.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://f33ot1.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://f33ot1.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://f33ot1.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://f33ot1.github.io/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://f33ot1.github.io/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/">
+  <meta property="og:site_name" content="malicious unicorn">
+  <meta property="og:title" content="Invoke methods from .NET Assemblies using Powershell and Reflection API">
+  <meta property="og:description" content="Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-11-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-27T00:00:00+00:00">
+    <meta property="article:tag" content="Reverse-Engineering">
+    <meta property="article:tag" content="Malware">
+    <meta property="article:tag" content="Dotnet">
+    <meta property="article:tag" content="Windows">
+    <meta property="article:tag" content="Dnspy">
+    <meta property="article:tag" content="Powershell">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Invoke methods from .NET Assemblies using Powershell and Reflection API">
+<meta name="twitter:description" content="Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://f33ot1.github.io/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Invoke methods from .NET Assemblies using Powershell and Reflection API",
+      "item": "https://f33ot1.github.io/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Invoke methods from .NET Assemblies using Powershell and Reflection API",
+  "name": "Invoke methods from .NET Assemblies using Powershell and Reflection API",
+  "description": "Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies",
+  "keywords": [
+    "reverse-engineering", "malware", "dotnet", "windows", "dnspy", "powershell"
+  ],
+  "articleBody": "Overview The malicious sample’s code in dnSpy remains obfuscated and highly complex. Through the use of PowerShell in conjunction with the .NET Reflection API is possible to invoke methods directly from imported assemblies. Rather than relying on static analysis and assumptions about the code’s behavior, this approach forces the execution of the specific method I am interested in.\nHow to import (load) an assembly using PowerShell When you import (load) an assembly, you are making its compiled classes and methods available in memory so you can interact with them.\nA .NET assembly is just a compiled file that contains code:\n.dll (most common for libraries) .exe (can also be loaded as an assembly) In PowerShell, this can be done with: Add-Type -Path “C:\\Tools\\MyLibrary.dll” or [Reflection.Assembly]::LoadFrom(“C:\\Tools\\MyLibrary.dll”)\n.NET Reflection API “You could use PowerShell in conjunction with the .NET Reflection API to invoke methods directly from imported assemblies.”\nReflection = code that can inspect other code at runtime.\nIn .NET, this lives mainly under: System.Reflection\nPowerShell has native access to Reflection because PowerShell itself is built on .NET.\nInvoke a method = Call a function that exists inside a compiled assembly.\nMethod By using PowerShell and Reflection:\nLoad the Malicious Assembly: Bring the malware into a controlled environment (like a sandbox). Inspect Its Methods: Use Reflection to see what functions (methods) are inside the malware code. Invoke Methods Manually: Instead of letting the malware run on its own, manually call certain methods to see what they do. The code ![[smethod_0.jpg]] From the code:\nClass name: Class238 Namespace: none (global namespace) Method: smethod_0 Signature: public static string smethod_0(int int_0) # Load the assembly (.exe or .dll) $AssemblyPath = “C:\\Users\\windows\\Documents\\analysis\\purelogsstealer\\sample\\payload_Slayead-cleaned.exe” $asm = [System.Reflection.Assembly]::LoadFrom($AssemblyPath)\n# Get the Class238 type (global namespace = just the name) $type = $asm.GetType(“Class238”)\n# Call the public static method smethod_0 with integer 0 $returnString = $type::smethod_0(0) Write-Output “Returned smethod_0 Method:” Write-Output $returnString\nResults During the execution of step 1 Load the assembly:\n![[payload_after_slayer.jpg]]\nThis means the assembly file was not recognized as a valid .NET assembly for execution, as expected.\n![[dnSpy_decompilationrpoblems.jpg]]\nNext step will be to reapply the tools to avoid causing as much corruption to the assembly.\nRe-applying .NET Reactor Slayer ![[slayer_gui.jpg]]\nI’ve attempted to select as few items as possible from the list. No matter which items I selected, or how many items I selected, I got the same result: the assembly appears to be corrupted enough not to load in PowerShell.\nBelow is a comparison between attempting to load the payload into memory before using .NET Reactor Slayer versus after its utilization.\nBefore ![[load_payload_before_Slayer.jpg]]\nAfter ![[payload_after_slayer 1.jpg]]\nThese results have been consistent across trials, which suggests that the use of .NET Reactor Slayer on the analyzed binary itself causes partial corruption of the assembly.\nContribution This portfolio is maintained as part of my learning journey as a student in cybersecurity and malware reverse engineering. While I strive for accuracy and clarity, some content may contain errors or be incomplete.\nIf you notice any issues, have suggestions for improvement, or would like to contribute, please feel free to reach out to me at f33ot1@gmail.com. Feedback is always welcome and appreciated.\nReferences https://systemweakness.com/invoke-methods-from-net-assemblies-using-powershell-and-reflection-api-4d8e3e9e93b2 ",
+  "wordCount" : "524",
+  "inLanguage": "en",
+  "datePublished": "2025-11-27T00:00:00Z",
+  "dateModified": "2025-11-27T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://f33ot1.github.io/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "malicious unicorn",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f33ot1.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://f33ot1.github.io/" accesskey="h" title="malicious unicorn (Alt + H)">malicious unicorn</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://f33ot1.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://f33ot1.github.io/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://f33ot1.github.io/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://f33ot1.github.io/learning/" title="Learning">
+                    <span>Learning</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Invoke methods from .NET Assemblies using Powershell and Reflection API
+    </h1>
+    <div class="post-meta"><span title='2025-11-27 00:00:00 +0000 UTC'>November 27, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
+<p>The malicious sample&rsquo;s code in dnSpy remains obfuscated and highly complex. Through the use of  PowerShell in conjunction with the .NET Reflection API is possible to invoke methods directly from imported assemblies. Rather than relying on static analysis and assumptions about the code’s behavior, this approach forces the execution of the specific method I am interested in.</p>
+<h2 id="how-to-import-load-an-assembly-using-powershell">How to import (load) an assembly using PowerShell<a hidden class="anchor" aria-hidden="true" href="#how-to-import-load-an-assembly-using-powershell">#</a></h2>
+<p>When you import (load) an assembly, you are making its compiled classes and methods <strong>available in memory</strong> so you can interact with them.</p>
+<p>A <strong>.NET assembly</strong> is just a compiled file that contains code:</p>
+<ul>
+<li>.dll (most common for libraries)</li>
+<li>.exe (can also be loaded as an assembly)</li>
+</ul>
+<p>In PowerShell, this can be done with:
+<em>Add-Type -Path &ldquo;C:\Tools\MyLibrary.dll&rdquo;</em>
+or
+<em>[Reflection.Assembly]::LoadFrom(&ldquo;C:\Tools\MyLibrary.dll&rdquo;)</em></p>
+<h2 id="net-reflection-api">.NET Reflection API<a hidden class="anchor" aria-hidden="true" href="#net-reflection-api">#</a></h2>
+<p>“You could use PowerShell in conjunction with the .NET Reflection API to invoke methods directly from imported assemblies.”</p>
+<p>Reflection = code that can inspect other code at runtime.</p>
+<p>In .NET, this lives mainly under:
+System.Reflection</p>
+<p><strong>PowerShell has native access to Reflection</strong> because PowerShell itself is built on .NET.</p>
+<p>Invoke a method = <em>Call a function that exists inside a compiled assembly.</em></p>
+<h2 id="method">Method<a hidden class="anchor" aria-hidden="true" href="#method">#</a></h2>
+<p>By using PowerShell and Reflection:</p>
+<ol>
+<li><strong>Load the Malicious Assembly:</strong> Bring the malware into a controlled environment (like a sandbox).</li>
+<li><strong>Inspect Its Methods:</strong> Use Reflection to see what functions (methods) are inside the malware code.</li>
+<li><strong>Invoke Methods Manually:</strong> Instead of letting the malware run on its own, manually call certain methods to see what they do.</li>
+</ol>
+<p>The code ![[smethod_0.jpg]]
+  
+From the code:</p>
+<ul>
+<li>Class name: Class238</li>
+<li>Namespace: <strong>none</strong> (global namespace)</li>
+<li>Method: smethod_0</li>
+<li>Signature: public static string smethod_0(int int_0)</li>
+</ul>
+<p><strong># Load the assembly (.exe or .dll)</strong>
+$AssemblyPath = &ldquo;C:\Users\windows\Documents\analysis\purelogsstealer\sample\payload_Slayead-cleaned.exe&rdquo;
+$asm = [System.Reflection.Assembly]::LoadFrom($AssemblyPath)</p>
+<p><strong># Get the Class238 type (global namespace = just the name)</strong>
+$type = $asm.GetType(&ldquo;Class238&rdquo;)</p>
+<p><strong># Call the public static method smethod_0 with integer 0</strong>
+$returnString = $type::smethod_0(0)
+Write-Output &ldquo;Returned smethod_0 Method:&rdquo;
+Write-Output $returnString</p>
+<h2 id="results">Results<a hidden class="anchor" aria-hidden="true" href="#results">#</a></h2>
+<p>During the execution of step 1 <strong>Load the assembly</strong>:</p>
+<p>![[payload_after_slayer.jpg]]</p>
+<p>This means the assembly file was not recognized as a valid .NET assembly for execution, as expected.</p>
+<p>![[dnSpy_decompilationrpoblems.jpg]]</p>
+<p>Next step will be to reapply the tools to avoid causing as much corruption to the assembly.</p>
+<h4 id="re-applying-net-reactor-slayer">Re-applying .NET Reactor Slayer<a hidden class="anchor" aria-hidden="true" href="#re-applying-net-reactor-slayer">#</a></h4>
+<p>![[slayer_gui.jpg]]</p>
+<p>I’ve attempted to select as few items as possible from the list. No matter which items I selected, or how many items I selected, I got the same result: the assembly appears to be corrupted enough not to load in PowerShell.</p>
+<p>Below is a comparison between attempting to load the payload into memory <strong>before</strong> using .NET Reactor Slayer versus <strong>after</strong> its utilization.</p>
+<h4 id="before">Before<a hidden class="anchor" aria-hidden="true" href="#before">#</a></h4>
+<p>![[load_payload_before_Slayer.jpg]]</p>
+<h4 id="after">After<a hidden class="anchor" aria-hidden="true" href="#after">#</a></h4>
+<p>![[payload_after_slayer 1.jpg]]</p>
+<p>These results have been consistent across trials, which suggests that the use of .NET Reactor Slayer on the analyzed binary itself causes partial corruption of the assembly.</p>
+<h3 id="contribution">Contribution<a hidden class="anchor" aria-hidden="true" href="#contribution">#</a></h3>
+<p>This portfolio is maintained as part of my learning journey as a student in cybersecurity and malware reverse engineering. While I strive for accuracy and clarity, some content may contain errors or be incomplete.</p>
+<p>If you notice any issues, have suggestions for improvement, or would like to contribute, please feel free to reach out to me at <strong><a href="mailto:f33ot1@gmail.com">f33ot1@gmail.com</a></strong>. Feedback is always welcome and appreciated.</p>
+<h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
+<ul>
+<li><a href="https://systemweakness.com/invoke-methods-from-net-assemblies-using-powershell-and-reflection-api-4d8e3e9e93b2">https://systemweakness.com/invoke-methods-from-net-assemblies-using-powershell-and-reflection-api-4d8e3e9e93b2</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://f33ot1.github.io/tags/reverse-engineering/">Reverse-Engineering</a></li>
+      <li><a href="https://f33ot1.github.io/tags/malware/">Malware</a></li>
+      <li><a href="https://f33ot1.github.io/tags/dotnet/">Dotnet</a></li>
+      <li><a href="https://f33ot1.github.io/tags/windows/">Windows</a></li>
+      <li><a href="https://f33ot1.github.io/tags/dnspy/">Dnspy</a></li>
+      <li><a href="https://f33ot1.github.io/tags/powershell/">Powershell</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://f33ot1.github.io/">malicious unicorn</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

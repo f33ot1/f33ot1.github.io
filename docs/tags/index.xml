@@ -6,26 +6,47 @@
     <description>Recent content in Tags on malicious unicorn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://f33ot1.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Learning</title>
-      <link>https://f33ot1.github.io/tags/learning/</link>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://f33ot1.github.io/tags/learning/</guid>
+      <title>Dnspy</title>
+      <link>https://f33ot1.github.io/tags/dnspy/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/dnspy/</guid>
       <description></description>
     </item>
     <item>
-      <title>Pe-File</title>
-      <link>https://f33ot1.github.io/tags/pe-file/</link>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://f33ot1.github.io/tags/pe-file/</guid>
+      <title>Dotnet</title>
+      <link>https://f33ot1.github.io/tags/dotnet/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/dotnet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware</title>
+      <link>https://f33ot1.github.io/tags/malware/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/malware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Powershell</title>
+      <link>https://f33ot1.github.io/tags/powershell/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse-Engineering</title>
+      <link>https://f33ot1.github.io/tags/reverse-engineering/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/reverse-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
       <link>https://f33ot1.github.io/tags/windows/</link>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://f33ot1.github.io/tags/windows/</guid>
       <description></description>
     </item>

@@ -6,14 +6,14 @@
     <description>Recent content in Windows on malicious unicorn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://f33ot1.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PE Header Basics</title>
-      <link>https://f33ot1.github.io/learning/pe-header-basics/</link>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://f33ot1.github.io/learning/pe-header-basics/</guid>
-      <description>A quick visual way to remember the main parts of a PE header.</description>
+      <title>Invoke methods from .NET Assemblies using Powershell and Reflection API</title>
+      <link>https://f33ot1.github.io/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/</guid>
+      <description>Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies</description>
     </item>
   </channel>
 </rss>

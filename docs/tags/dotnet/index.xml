@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>malicious unicorn</title>
-    <link>https://f33ot1.github.io/</link>
-    <description>Recent content on malicious unicorn</description>
+    <title>Dotnet on malicious unicorn</title>
+    <link>https://f33ot1.github.io/tags/dotnet/</link>
+    <description>Recent content in Dotnet on malicious unicorn</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://f33ot1.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://f33ot1.github.io/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Invoke methods from .NET Assemblies using Powershell and Reflection API</title>
       <link>https://f33ot1.github.io/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/</link>
