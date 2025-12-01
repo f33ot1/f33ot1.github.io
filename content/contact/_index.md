@@ -6,4 +6,4 @@ draft: false
 
 You can reach me here:
 
-- Email: neca.arc@gmail.com
+- email: f33ot1@gmail.com

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/projects/Invoke methods from .NET Assemblies using Powershell and Reflection API.md",
+                "file": "data/content/posts/example.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Invoke methods from .NET Assemblies using Powershell and Reflection API"
+              "title": "example"
             }
           }
         ]
@@ -195,15 +195,23 @@
   },
   "active": "b879312a3eba18b8",
   "lastOpenFiles": [
-    "payload_after_slayer 1.jpg",
-    "load_payload_before_Slayer.jpg",
     "slayer_gui.jpg",
-    "dnSpy_decompilationrpoblems.jpg",
-    "payload_after_slayer.jpg",
     "smethod_0.jpg",
-    "content/_index.md",
     "content/projects/_index.md",
     "content/projects/Invoke methods from .NET Assemblies using Powershell and Reflection API.md",
+    "content/learning/pe-header-basics.md",
+    "content/learning/_index.md",
+    "data/content/posts/example.md",
+    "content/contact/_index.md",
+    "content/about/_index.md",
+    "archetypes/project.md",
+    "archetypes/learning.md",
+    "archetypes/default.md",
+    "payload_after_slayer 1.jpg",
+    "payload_after_slayer.jpg",
+    "load_payload_before_Slayer.jpg",
+    "dnSpy_decompilationrpoblems.jpg",
+    "content/_index.md",
     "layouts/public/images/gohugo-default-sample-hero-image.jpg",
     "layouts/public/Hello.md"
   ]

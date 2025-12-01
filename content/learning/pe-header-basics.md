@@ -1,9 +1,12 @@
 ---
-title: "PE Header Basics"
+title: PE Header Basics
 date: 2025-11-26
-draft: false
-summary: "A quick visual way to remember the main parts of a PE header."
-tags: ["learning", "windows", "pe-file"]
+draft: true
+summary: A quick visual way to remember the main parts of a PE header.
+tags:
+  - learning
+  - windows
+  - pe-file
 ---
 ## Core Idea
 
