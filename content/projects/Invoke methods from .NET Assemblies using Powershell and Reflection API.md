@@ -51,7 +51,8 @@ By using PowerShell and Reflection:
 2. **Inspect Its Methods:** Use Reflection to see what functions (methods) are inside the malware code.
 3. **Invoke Methods Manually:** Instead of letting the malware run on its own, manually call certain methods to see what they do. 
 
-The code ![[smethod_0.jpg]]
+The code ![smethod_0](/images/smethod_0.jpg)
+
   
 From the code:
 - Class name: Class238
@@ -73,29 +74,31 @@ Write-Output $returnString
 
 
 ## Results
+![payload_after_slayer](/images/payload_after_slayer.jpg)
 
-During the execution of step 1 **Load the assembly**:
 
-![[payload_after_slayer.jpg]]
+During the execution of step 1 **Load the assembly:
 
 This means the assembly file was not recognized as a valid .NET assembly for execution, as expected.
 
-![[dnSpy_decompilationrpoblems.jpg]]
+![dnSpy](/images/dnSpy.jpg)
 
 Next step will be to reapply the tools to avoid causing as much corruption to the assembly. 
 
 #### Re-applying .NET Reactor Slayer
 
-![[slayer_gui.jpg]]
+![slayer_gui](/images/slayer_gui.jpg)
 
 I’ve attempted to select as few items as possible from the list. No matter which items I selected, or how many items I selected, I got the same result: the assembly appears to be corrupted enough not to load in PowerShell.
 
 Below is a comparison between attempting to load the payload into memory **before** using .NET Reactor Slayer versus **after** its utilization.
 
 #### Before
-![[load_payload_before_Slayer.jpg]]
+![payload_before_slayer.jpg](/images/payload_before_slayer.jpg)
+
+
 #### After
-![[payload_after_slayer 1.jpg]]
+![payload_after_slayer.jpg](/images/payload_after_slayer.jpg)
 
 These results have been consistent across trials, which suggests that the use of .NET Reactor Slayer on the analyzed binary itself causes partial corruption of the assembly.
 

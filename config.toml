@@ -1,6 +1,6 @@
 baseURL = "https://f33ot1.github.io/"
 languageCode = "en-us"
-title = "malicious unicorn"
+title = "cabin C086"
 theme = "PaperMod"
 publishDir = "./docs"
         

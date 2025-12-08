@@ -2,45 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://f33ot1.github.io/tags/dnspy/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/tags/dotnet/</loc>
+    <loc>http://localhost:1313/tags/dnspy/</loc>
     <lastmod>2025-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/</loc>
+    <loc>http://localhost:1313/tags/dotnet/</loc>
     <lastmod>2025-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/</loc>
+    <loc>http://localhost:1313/projects/invoke-methods-from-.net-assemblies-using-powershell-and-reflection-api/</loc>
     <lastmod>2025-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/tags/malware/</loc>
+    <loc>http://localhost:1313/tags/malware/</loc>
     <lastmod>2025-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/tags/powershell/</loc>
+    <loc>http://localhost:1313/tags/powershell/</loc>
     <lastmod>2025-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/tags/reverse-engineering/</loc>
+    <loc>http://localhost:1313/tags/reverse-engineering/</loc>
     <lastmod>2025-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/tags/windows/</loc>
+    <loc>http://localhost:1313/tags/windows/</loc>
     <lastmod>2025-11-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2025-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
     <lastmod>2025-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/learning/</loc>
+    <loc>http://localhost:1313/learning/</loc>
     <lastmod>2025-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/projects/</loc>
+    <loc>http://localhost:1313/projects/</loc>
     <lastmod>2025-11-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://f33ot1.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>
