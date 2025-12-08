@@ -11,25 +11,25 @@ publishDir = "./docs"
 
   [[menu.main]]
     identifier = "about"
-    name = "About"
-    url = "/about/"
+    name = "about"
+    url = "https://f33ot1.github.io/about/"
     weight = 1
 
   [[menu.main]]
     identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
+    name = "contact"
+    url = "https://f33ot1.github.io/contact/"
     weight = 2
 
   [[menu.main]]
     identifier = "projects"
-    name = "Projects"
-    url = "/projects/"
+    name = "projects"
+    url = "https://f33ot1.github.io/projects/"
     weight = 3
 
   [[menu.main]]
     identifier = "learning"
-    name = "Learning"
-    url = "/learning/"
+    name = "learning"
+    url = "https://f33ot1.github.io/learning/"
     weight = 4
 
