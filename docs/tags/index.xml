@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on cabin C086</title>
-    <link>https://f33ot1.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on cabin C086</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://f33ot1.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dnspy</title>
-      <link>https://f33ot1.github.io/tags/dnspy/</link>
+      <link>http://localhost:1313/tags/dnspy/</link>
       <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://f33ot1.github.io/tags/dnspy/</guid>
+      <guid>http://localhost:1313/tags/dnspy/</guid>
       <description></description>
     </item>
     <item>
       <title>Dotnet</title>
-      <link>https://f33ot1.github.io/tags/dotnet/</link>
+      <link>http://localhost:1313/tags/dotnet/</link>
       <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://f33ot1.github.io/tags/dotnet/</guid>
+      <guid>http://localhost:1313/tags/dotnet/</guid>
       <description></description>
     </item>
     <item>
       <title>Malware</title>
-      <link>https://f33ot1.github.io/tags/malware/</link>
+      <link>http://localhost:1313/tags/malware/</link>
       <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://f33ot1.github.io/tags/malware/</guid>
+      <guid>http://localhost:1313/tags/malware/</guid>
       <description></description>
     </item>
     <item>
       <title>Powershell</title>
-      <link>https://f33ot1.github.io/tags/powershell/</link>
+      <link>http://localhost:1313/tags/powershell/</link>
       <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://f33ot1.github.io/tags/powershell/</guid>
+      <guid>http://localhost:1313/tags/powershell/</guid>
       <description></description>
     </item>
     <item>
       <title>Reverse-Engineering</title>
-      <link>https://f33ot1.github.io/tags/reverse-engineering/</link>
+      <link>http://localhost:1313/tags/reverse-engineering/</link>
       <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://f33ot1.github.io/tags/reverse-engineering/</guid>
+      <guid>http://localhost:1313/tags/reverse-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>https://f33ot1.github.io/tags/windows/</link>
+      <link>http://localhost:1313/tags/windows/</link>
       <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://f33ot1.github.io/tags/windows/</guid>
+      <guid>http://localhost:1313/tags/windows/</guid>
       <description></description>
     </item>
   </channel>
