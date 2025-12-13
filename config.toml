@@ -8,28 +8,27 @@ publishDir = "./docs"
   defaultTheme = "dark"
 
 [menu]
-
   [[menu.main]]
     identifier = "about"
     name = "about"
-    url = "https://f33ot1.github.io/about/"
+    url = "/about/"
     weight = 1
 
   [[menu.main]]
     identifier = "contact"
     name = "contact"
-    url = "https://f33ot1.github.io/contact/"
+    url = "/contact/"
     weight = 2
 
   [[menu.main]]
     identifier = "projects"
     name = "projects"
-    url = "https://f33ot1.github.io/projects/"
+    url = "/projects/"
     weight = 3
 
   [[menu.main]]
     identifier = "learning"
     name = "learning"
-    url = "https://f33ot1.github.io/learning/"
+    url = "/learning/"
     weight = 4
 
