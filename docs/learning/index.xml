@@ -1,1 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Learning on cabin C086</title><link>https://f33ot1.github.io/learning/</link><description>Recent content in Learning on cabin C086</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate/><atom:link href="https://f33ot1.github.io/learning/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Learning on cabin C086</title>
+    <link>https://f33ot1.github.io/learning/</link>
+    <description>Recent content in Learning on cabin C086</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://f33ot1.github.io/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding the .NET Execution Model</title>
+      <link>https://f33ot1.github.io/learning/understanding-the-.net-execution-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/learning/understanding-the-.net-execution-model/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This note is a learning exercise to understand how .NET code is structured, loaded, and executed. I found it difficult to learn each element in isolation or in a small system, so I started with a high-level view of the .NET execution model, illustrated in the following diagram. To better understand each element, I located and examined it in dnSpy.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;high-level-overview&#34;&gt;High-Level Overview&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&#34;Diagram&#34; loading=&#34;lazy&#34; src=&#34;https://f33ot1.github.io/images/learning_post1_lilly_diagram.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;core-concepts&#34;&gt;Core Concepts&lt;/h2&gt;
+&lt;h3 id=&#34;1-assembly&#34;&gt;1. Assembly&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Assembly&#34; loading=&#34;lazy&#34; src=&#34;https://f33ot1.github.io/images/learning_post1_assembly.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-modulo&#34;&gt;2. Modulo&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;Module&#34; loading=&#34;lazy&#34; src=&#34;https://f33ot1.github.io/images/learning_post1_payload_module.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

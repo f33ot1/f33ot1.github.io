@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Reverse-Engineering on cabin C086</title><link>https://f33ot1.github.io/tags/reverse-engineering/</link><description>Recent content in Reverse-Engineering on cabin C086</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://f33ot1.github.io/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Using PowerShell Reflection to Invoke Methods in an Obfuscated .NET Malware Sample</title><link>https://f33ot1.github.io/projects/using-powershell-reflection-to-invoke-methods-in-an-obfuscated-.net-malware-sample/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>https://f33ot1.github.io/projects/using-powershell-reflection-to-invoke-methods-in-an-obfuscated-.net-malware-sample/</guid><description>Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reverse-Engineering on cabin C086</title>
+    <link>https://f33ot1.github.io/tags/reverse-engineering/</link>
+    <description>Recent content in Reverse-Engineering on cabin C086</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://f33ot1.github.io/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using .net reflection with Powershell to invoke a method in .NET</title>
+      <link>https://f33ot1.github.io/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/</guid>
+      <description>Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies</description>
+    </item>
+  </channel>
+</rss>

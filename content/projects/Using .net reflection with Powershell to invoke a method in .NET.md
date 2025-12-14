@@ -1,5 +1,5 @@
 ---
-title: Using PowerShell Reflection to Invoke Methods in an Obfuscated .NET Malware Sample
+title: Using .net reflection with Powershell to invoke a method in .NET
 date: 2025-11-27
 draft: false
 summary: Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies
@@ -16,11 +16,16 @@ tools:
 ---
 ## Overview
 
-The malicious sample (hash) I am analyzing in dnSpy remains heavily obfuscated and highly complex. By using PowerShell in conjunction with the .NET Reflection API, I am able to invoke methods directly from imported assemblies. Rather than relying solely on static analysis and assumptions about the code’s behavior, this approach allows me to execute the specific methods I am interested in.
+The malicious sample [hash] I am analyzing in dnSpy remains heavily obfuscated and highly complex. By using PowerShell in conjunction with the .NET Reflection API, I am able to invoke methods directly from imported assemblies. Rather than relying solely on static analysis and assumptions about the code’s behavior, this approach allows me to execute the specific methods I am interested in.
 
 Before moving forward, I felt a need to refresh key concepts used in this technique. In Part 1, I briefly describe them.
 
 ### PART 1: THE CONCEPTS
+
+Here's a high level diagram.
+
+![Diagram](/learning_post1_lilly_diagram.png)
+
 
 ### How to import (load) an assembly using PowerShell
 
@@ -40,14 +45,19 @@ or
 
 **PowerShell has native access to Reflection** because PowerShell itself is built on .NET.
 
-### .NET Reflection API
+### REFLECTION IN .NET
+Reflection allows one part of a program to dynamically query and invoke another, in terms of assemblies, types, and members.
+Assemblies contain modules, modules contain types, and types contain members. Reflection provides objects that encapsulate assemblies, modules, and types.
 
-To Invoke a method = _Call a function that exists inside a compiled assembly._
-Reflection = code that can inspect other code at runtime.
+The classes in the `System.Reflection` namespace, together with `System.Type`, allow us to:
 
-In .NET, this lives mainly under:
+- Obtain information about loaded assemblies and the types defined within them, such as classes, interfaces, and value types (that is, structures and enumerations).
+    
+- Create type instances at runtime, and invoke or access their members.
+    
+- Create an instance of a type, bind the type to an existing object, or get the type from an existing object. Then, the user can invoke the type’s methods or access its fields and properties.
 
-```System.Reflection```
+The ```System.Type``` class is central to reflection. The common language runtime creates the Type for a loaded type when reflection requests it. You can use a Type object's methods, fields, properties, and nested classes to find out everything about that type.
 
 ### PART 2: THE METHOD
 
@@ -136,4 +146,6 @@ If you notice any issues, have suggestions for improvement, or would like to con
 ## References
 
 - https://systemweakness.com/invoke-methods-from-net-assemblies-using-powershell-and-reflection-api-4d8e3e9e93b2
+- [https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/reflection](https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/reflection)
+- https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/viewing-type-information
 

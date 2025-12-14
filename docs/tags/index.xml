@@ -1,1 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Tags on cabin C086</title><link>https://f33ot1.github.io/tags/</link><description>Recent content in Tags on cabin C086</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://f33ot1.github.io/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Dnspy</title><link>https://f33ot1.github.io/tags/dnspy/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>https://f33ot1.github.io/tags/dnspy/</guid><description/></item><item><title>Dotnet</title><link>https://f33ot1.github.io/tags/dotnet/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>https://f33ot1.github.io/tags/dotnet/</guid><description/></item><item><title>Malware</title><link>https://f33ot1.github.io/tags/malware/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>https://f33ot1.github.io/tags/malware/</guid><description/></item><item><title>Powershell</title><link>https://f33ot1.github.io/tags/powershell/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>https://f33ot1.github.io/tags/powershell/</guid><description/></item><item><title>Reverse-Engineering</title><link>https://f33ot1.github.io/tags/reverse-engineering/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>https://f33ot1.github.io/tags/reverse-engineering/</guid><description/></item><item><title>Windows</title><link>https://f33ot1.github.io/tags/windows/</link><pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate><guid>https://f33ot1.github.io/tags/windows/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on cabin C086</title>
+    <link>https://f33ot1.github.io/tags/</link>
+    <description>Recent content in Tags on cabin C086</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://f33ot1.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dnspy</title>
+      <link>https://f33ot1.github.io/tags/dnspy/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/dnspy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dotnet</title>
+      <link>https://f33ot1.github.io/tags/dotnet/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/dotnet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware</title>
+      <link>https://f33ot1.github.io/tags/malware/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/malware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Powershell</title>
+      <link>https://f33ot1.github.io/tags/powershell/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse-Engineering</title>
+      <link>https://f33ot1.github.io/tags/reverse-engineering/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/reverse-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://f33ot1.github.io/tags/windows/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Learning</title>
+      <link>https://f33ot1.github.io/tags/learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware-Analysis</title>
+      <link>https://f33ot1.github.io/tags/malware-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/malware-analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reflection</title>
+      <link>https://f33ot1.github.io/tags/reflection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/tags/reflection/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

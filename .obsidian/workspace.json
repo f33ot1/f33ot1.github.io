@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d52bca24d9f4a9fe",
+        "id": "e2563e9fd59ccc89",
         "type": "tabs",
         "children": [
           {
-            "id": "b879312a3eba18b8",
+            "id": "eace0d5ce6cbef7e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/projects/Using PowerShell Reflection to Invoke Methods in an Obfuscated .NET Malware Sample.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Using PowerShell Reflection to Invoke Methods in an Obfuscated .NET Malware Sample"
+              "title": "New tab"
             }
           }
         ]
@@ -84,8 +80,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -194,19 +189,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b879312a3eba18b8",
+  "active": "eace0d5ce6cbef7e",
   "lastOpenFiles": [
+    "content/projects/Using .net reflection with Powershell to invoke a method in .NET.md",
+    "content/learning/Understanding the .NET Execution Model.md",
+    "content/learning/pe-header-basics.md",
+    "content/learning/_index.md",
+    "Untitled.md",
+    "Untitled 1.md",
+    "content/projects/_index.md",
+    "content/contact/_index.md",
     "load_payload_before_Slayer.jpg",
     "payload_after_slayer.jpg",
     "dnSpy_decompilationrpoblems.jpg",
     "data/content/posts/example.md",
     "slayer_gui.jpg",
     "smethod_0.jpg",
-    "content/projects/_index.md",
-    "content/projects/Using PowerShell Reflection to Invoke Methods in an Obfuscated .NET Malware Sample.md",
-    "content/learning/pe-header-basics.md",
-    "content/learning/_index.md",
-    "content/contact/_index.md",
     "content/about/_index.md",
     "archetypes/project.md",
     "archetypes/learning.md",
