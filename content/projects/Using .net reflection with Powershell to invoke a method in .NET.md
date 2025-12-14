@@ -24,7 +24,7 @@ Before moving forward, I felt a need to refresh key concepts used in this techni
 
 Here's a high level diagram.
 
-![Diagram](/learning_post1_lilly_diagram.png)
+![diagram](/images/learning_post1_lilly_diagram.png)
 
 
 ### How to import (load) an assembly using PowerShell
