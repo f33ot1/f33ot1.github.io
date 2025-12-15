@@ -11,10 +11,14 @@
             "id": "eace0d5ce6cbef7e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/projects/Using .net reflection with Powershell to invoke a method in .NET.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Using .net reflection with Powershell to invoke a method in .NET"
             }
           }
         ]
