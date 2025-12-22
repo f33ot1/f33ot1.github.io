@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e2563e9fd59ccc89",
+        "id": "d4c130dccaeb55ae",
         "type": "tabs",
         "children": [
           {
-            "id": "eace0d5ce6cbef7e",
+            "id": "5bc131a146e22334",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/projects/Using .net reflection with Powershell to invoke a method in .NET.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Using .net reflection with Powershell to invoke a method in .NET"
+              "title": "New tab"
             }
           }
         ]
@@ -193,10 +189,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eace0d5ce6cbef7e",
+  "active": "5bc131a146e22334",
   "lastOpenFiles": [
     "content/projects/Using .net reflection with Powershell to invoke a method in .NET.md",
     "content/learning/Understanding the .NET Execution Model.md",
+    "data/content/posts/example.md",
     "content/learning/pe-header-basics.md",
     "content/learning/_index.md",
     "Untitled.md",
@@ -206,7 +203,6 @@
     "load_payload_before_Slayer.jpg",
     "payload_after_slayer.jpg",
     "dnSpy_decompilationrpoblems.jpg",
-    "data/content/posts/example.md",
     "slayer_gui.jpg",
     "smethod_0.jpg",
     "content/about/_index.md",

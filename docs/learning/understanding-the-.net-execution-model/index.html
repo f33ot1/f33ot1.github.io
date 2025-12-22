@@ -15,10 +15,8 @@ High-Level Overview
 
 Core Concepts
 1. Assembly
-
-
-2. Modulo
-">
+An assembly is a collection of types and resources that are built to work together and form a logical unit of functionality.
+Assemblies are the fundamental units of deployment, versioning, reuse, activation scoping, and security permissions for .NET applications.">
 <meta name="author" content="">
 <link rel="canonical" href="https://f33ot1.github.io/learning/understanding-the-.net-execution-model/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
@@ -48,7 +46,8 @@ Core Concepts
   <meta property="og:site_name" content="cabin C086">
   <meta property="og:title" content="Understanding the .NET Execution Model">
   <meta property="og:description" content="Overview This note is a learning exercise to understand how .NET code is structured, loaded, and executed. I found it difficult to learn each element in isolation or in a small system, so I started with a high-level view of the .NET execution model, illustrated in the following diagram. To better understand each element, I located and examined it in dnSpy.
-High-Level Overview Core Concepts 1. Assembly 2. Modulo ">
+High-Level Overview Core Concepts 1. Assembly An assembly is a collection of types and resources that are built to work together and form a logical unit of functionality.
+Assemblies are the fundamental units of deployment, versioning, reuse, activation scoping, and security permissions for .NET applications.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="learning">
@@ -67,10 +66,8 @@ High-Level Overview
 
 Core Concepts
 1. Assembly
-
-
-2. Modulo
-">
+An assembly is a collection of types and resources that are built to work together and form a logical unit of functionality.
+Assemblies are the fundamental units of deployment, versioning, reuse, activation scoping, and security permissions for .NET applications.">
 
 
 <script type="application/ld+json">
@@ -99,12 +96,12 @@ Core Concepts
   "@type": "BlogPosting",
   "headline": "Understanding the .NET Execution Model",
   "name": "Understanding the .NET Execution Model",
-  "description": "Overview This note is a learning exercise to understand how .NET code is structured, loaded, and executed. I found it difficult to learn each element in isolation or in a small system, so I started with a high-level view of the .NET execution model, illustrated in the following diagram. To better understand each element, I located and examined it in dnSpy.\nHigh-Level Overview Core Concepts 1. Assembly 2. Modulo ",
+  "description": "Overview This note is a learning exercise to understand how .NET code is structured, loaded, and executed. I found it difficult to learn each element in isolation or in a small system, so I started with a high-level view of the .NET execution model, illustrated in the following diagram. To better understand each element, I located and examined it in dnSpy.\nHigh-Level Overview Core Concepts 1. Assembly An assembly is a collection of types and resources that are built to work together and form a logical unit of functionality.\nAssemblies are the fundamental units of deployment, versioning, reuse, activation scoping, and security permissions for .NET applications.\n",
   "keywords": [
     "dotnet", "reflection", "dnspy", "malware-analysis", "learning"
   ],
-  "articleBody": "Overview This note is a learning exercise to understand how .NET code is structured, loaded, and executed. I found it difficult to learn each element in isolation or in a small system, so I started with a high-level view of the .NET execution model, illustrated in the following diagram. To better understand each element, I located and examined it in dnSpy.\nHigh-Level Overview Core Concepts 1. Assembly 2. Modulo 3. Namespace 4. Class 5. Method 6. Method Metadata References https://learn.microsoft.com/en-us/dotnet/core/introduction?WT.mc_id=dotnet-35129-website\nhttps://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet\nhttps://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/reflection\n[https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/viewing-type-information]\n",
-  "wordCount" : "83",
+  "articleBody": "Overview This note is a learning exercise to understand how .NET code is structured, loaded, and executed. I found it difficult to learn each element in isolation or in a small system, so I started with a high-level view of the .NET execution model, illustrated in the following diagram. To better understand each element, I located and examined it in dnSpy.\nHigh-Level Overview Core Concepts 1. Assembly An assembly is a collection of types and resources that are built to work together and form a logical unit of functionality.\nAssemblies are the fundamental units of deployment, versioning, reuse, activation scoping, and security permissions for .NET applications.\n2. Module A module is a portable executable file, such as a .dll or .exe, that contains Intermediate Language (IL) code and metadata.\nAn assembly can consist of one or more modules.\n3. Namespace A namespace is a logical grouping of types.\nNamespaces are used to organize code and to avoid name collisions.\n4. Class A class is a reference type that can contain data members, function members, constructors, nested types, and type operators.\n5. Method A method is a code block that contains a series of statements.\nA method can be invoked to perform an action.\n6. Method Metadata Metadata (in general) describes the types defined in an assembly, including their members, the parameters of methods, and other information required at runtime.\nThe Common Language Runtime uses metadata to locate and load classes, lay out instances in memory, and invoke methods.\nReferences https://learn.microsoft.com/en-us/dotnet/standard/assembly/ https://learn.microsoft.com/en-us/dotnet/standard/assembly/#assemblies-and-modules https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/namespaces/ https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods https://learn.microsoft.com/en-us/dotnet/standard/metadata-and-self-describing-components https://learn.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/reflection https://learn.microsoft.com/en-us/dotnet/standard/clr\n",
+  "wordCount" : "257",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -195,27 +192,42 @@ Core Concepts
 <hr>
 <h2 id="core-concepts">Core Concepts<a hidden class="anchor" aria-hidden="true" href="#core-concepts">#</a></h2>
 <h3 id="1-assembly">1. Assembly<a hidden class="anchor" aria-hidden="true" href="#1-assembly">#</a></h3>
+<p>An assembly is a <strong>collection of types and resources</strong> that are built to work together and form a <strong>logical unit of functionality</strong>.<br>
+Assemblies are the <strong>fundamental units of deployment, versioning, reuse, activation scoping, and security permissions</strong> for .NET applications.</p>
 <p><img alt="Assembly" loading="lazy" src="/images/learning_post1_assembly.png"></p>
 <hr>
-<h3 id="2-modulo">2. Modulo<a hidden class="anchor" aria-hidden="true" href="#2-modulo">#</a></h3>
+<h3 id="2-module">2. Module<a hidden class="anchor" aria-hidden="true" href="#2-module">#</a></h3>
+<p>A module is a <strong>portable executable file</strong>, such as a <code>.dll</code> or <code>.exe</code>, that contains <strong>Intermediate Language (IL) code and metadata</strong>.<br>
+An assembly can consist of <strong>one or more modules</strong>.</p>
 <p><img alt="Module" loading="lazy" src="/images/learning_post1_payload_module.png"></p>
 <hr>
 <h3 id="3-namespace">3. Namespace<a hidden class="anchor" aria-hidden="true" href="#3-namespace">#</a></h3>
+<p>A namespace is a <strong>logical grouping of types</strong>.<br>
+Namespaces are used to <strong>organize code</strong> and to <strong>avoid name collisions</strong>.</p>
 <p><img alt="Namespace" loading="lazy" src="/images/learning_post1_namespaces.png"></p>
 <hr>
 <h3 id="4-class">4. Class<a hidden class="anchor" aria-hidden="true" href="#4-class">#</a></h3>
+<p>A class is a <strong>reference type</strong> that can contain <strong>data members, function members, constructors, nested types, and type operators</strong>.</p>
 <h2 id="class"><img alt="Class" loading="lazy" src="/images/learning_post1_class.png"><a hidden class="anchor" aria-hidden="true" href="#class">#</a></h2>
 <h3 id="5-method">5. Method<a hidden class="anchor" aria-hidden="true" href="#5-method">#</a></h3>
+<p>A method is a <strong>code block</strong> that contains a series of statements.<br>
+A method can be <strong>invoked</strong> to perform an action.</p>
 <p><img alt="Method" loading="lazy" src="/images/learning_post1_method.png"></p>
 <hr>
 <h3 id="6-method-metadata">6. Method Metadata<a hidden class="anchor" aria-hidden="true" href="#6-method-metadata">#</a></h3>
+<p>Metadata (in general) describes the <strong>types defined in an assembly</strong>, including <strong>their members</strong>, the <strong>parameters of methods</strong>, and other information required at runtime.<br>
+The Common Language Runtime uses metadata to <strong>locate and load classes</strong>, <strong>lay out instances in memory</strong>, and <strong>invoke methods</strong>.</p>
 <p><img alt="Metadata" loading="lazy" src="/images/learning_post1_Method_VAI_Metadata.png"></p>
 <h2 id="metadetails"><img alt="Metadetails" loading="lazy" src="/images/learning_post1_Method_VAI_Detailed_Metadata2.png"><a hidden class="anchor" aria-hidden="true" href="#metadetails">#</a></h2>
 <h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
-<p><a href="https://learn.microsoft.com/en-us/dotnet/core/introduction?WT.mc_id=dotnet-35129-website">https://learn.microsoft.com/en-us/dotnet/core/introduction?WT.mc_id=dotnet-35129-website</a></p>
-<p><a href="https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet">https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet</a></p>
-<p><a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/reflection">https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/reflection</a></p>
-<p>[https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/viewing-type-information]</p>
+<p><a href="https://learn.microsoft.com/en-us/dotnet/standard/assembly/">https://learn.microsoft.com/en-us/dotnet/standard/assembly/</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/standard/assembly/#assemblies-and-modules">https://learn.microsoft.com/en-us/dotnet/standard/assembly/#assemblies-and-modules</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/namespaces/">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/namespaces/</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods">https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/standard/metadata-and-self-describing-components">https://learn.microsoft.com/en-us/dotnet/standard/metadata-and-self-describing-components</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/reflection">https://learn.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/reflection</a>
+<a href="https://learn.microsoft.com/en-us/dotnet/standard/clr">https://learn.microsoft.com/en-us/dotnet/standard/clr</a></p>
 
 
   </div>
