@@ -11,10 +11,14 @@
             "id": "5bc131a146e22334",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/learning/Reflection.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Reflection"
             }
           }
         ]
@@ -191,10 +195,11 @@
   },
   "active": "5bc131a146e22334",
   "lastOpenFiles": [
-    "content/projects/Using .net reflection with Powershell to invoke a method in .NET.md",
-    "content/learning/Understanding the .NET Execution Model.md",
-    "data/content/posts/example.md",
     "content/learning/pe-header-basics.md",
+    "content/learning/Reflection.md",
+    "content/learning/Understanding the .NET Execution Model.md",
+    "content/projects/Using .net reflection with Powershell to invoke a method in .NET.md",
+    "data/content/posts/example.md",
     "content/learning/_index.md",
     "Untitled.md",
     "Untitled 1.md",

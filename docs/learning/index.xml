@@ -9,6 +9,14 @@
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://f33ot1.github.io/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://f33ot1.github.io/learning/reflection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://f33ot1.github.io/learning/reflection/</guid>
+      <description>&lt;p&gt;It’s the end of 2025, and it’s time to reflect on my experiences. I am reflecting on my journey learning malware reverse engineering, as it has been one of the most fascinating paths I have taken. Beyond the obvious professional and career benefits, this learning journey brought me:&lt;/p&gt;
+&lt;p&gt;greater self-knowledge and a better understanding of how I approach difficult, complex, and challenging situations (both technically and in life in general);&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Understanding the .NET Execution Model</title>
       <link>https://f33ot1.github.io/learning/understanding-the-.net-execution-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
