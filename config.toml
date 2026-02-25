@@ -3,9 +3,10 @@ languageCode = "en-us"
 title = "cabin C086"
 theme = "PaperMod"
 publishDir = "./docs"
-        
+
 [params]
   defaultTheme = "dark"
+  author = "f33ot1"
 
 [menu]
   [[menu.main]]
@@ -13,22 +14,18 @@ publishDir = "./docs"
     name = "about"
     url = "/about/"
     weight = 1
-
   [[menu.main]]
     identifier = "contact"
     name = "contact"
     url = "/contact/"
     weight = 2
-
   [[menu.main]]
     identifier = "projects"
     name = "projects"
     url = "/projects/"
     weight = 3
-
   [[menu.main]]
     identifier = "learning"
     name = "learning"
     url = "/learning/"
     weight = 4
-
