@@ -1,6 +1,6 @@
 baseURL = "https://f33ot1.github.io/"
 languageCode = "en-us"
-title = "cabin C086"
+title = "f33ot1"
 theme = "PaperMod"
 publishDir = "./docs"
 

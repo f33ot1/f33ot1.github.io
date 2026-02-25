@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>cabin C086</title>
+    <title>f33ot1</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on cabin C086</description>
+    <description>Recent content on f33ot1</description>
     <generator>Hugo -- 0.157.0</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate>
@@ -14,22 +14,6 @@
       <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/</guid>
       <description>Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/learning/reflection/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/learning/reflection/</guid>
-      <description>&lt;p&gt;It’s the end of 2025, and it’s time to reflect on my experiences. I am reflecting on my journey learning malware reverse engineering, as it has been one of the most fascinating paths I have taken. This learning journey brought me:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;greater self-knowledge and a better understanding of how I approach difficult, complex, and challenging situations (both technically and in life in general);&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;increased patience;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;a higher tolerance for frustration;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding the .NET Execution Model</title>
