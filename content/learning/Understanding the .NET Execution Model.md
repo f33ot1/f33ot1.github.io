@@ -71,12 +71,12 @@ The Common Language Runtime uses metadata to **locate and load classes**, **lay 
 
 ## References
 
-https://learn.microsoft.com/en-us/dotnet/standard/assembly/
-https://learn.microsoft.com/en-us/dotnet/standard/assembly/#assemblies-and-modules
-https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/namespaces/
-https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes
-https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods
-https://learn.microsoft.com/en-us/dotnet/standard/metadata-and-self-describing-components
-https://learn.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/reflection
-https://learn.microsoft.com/en-us/dotnet/standard/clr
+- https://learn.microsoft.com/en-us/dotnet/standard/assembly/
+- https://learn.microsoft.com/en-us/dotnet/standard/assembly/#assemblies-and-modules
+- https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/namespaces/
+- https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes
+- https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods
+- https://learn.microsoft.com/en-us/dotnet/standard/metadata-and-self-describing-components
+- https://learn.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/reflection
+- https://learn.microsoft.com/en-us/dotnet/standard/clr
 

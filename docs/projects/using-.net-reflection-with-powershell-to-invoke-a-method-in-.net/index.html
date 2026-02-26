@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="dark">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Using .net reflection with Powershell to invoke a method in .NET | f33ot1</title>
 <meta name="keywords" content="reverse-engineering, malware, dotnet, windows, dnspy, powershell">
 <meta name="description" content="Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies">
 <meta name="author" content="f33ot1">
-<link rel="canonical" href="http://localhost:1313/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b91345587dcc352f8df1adffc1c2fb007b88ab8829c1677fcf53aae03654190a.css" integrity="sha256-uRNFWH3MNS&#43;N8a3/wcL7AHuIq4gpwWd/z1Oq4DZUGQo=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="canonical" href="https://f33ot1.github.io/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cfd2be01794a9a149876c1bd2c73d99a9c5201cb5ab87ed53039d770f6bfc6d1.css" integrity="sha256-z9K&#43;AXlKmhSYdsG9LHPZmpxSActauH7VMDnXcPa/xtE=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://f33ot1.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://f33ot1.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://f33ot1.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://f33ot1.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://f33ot1.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/">
+<link rel="alternate" hreflang="en" href="https://f33ot1.github.io/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/">
 <noscript>
     <style>
         #theme-toggle,
@@ -33,13 +33,85 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="https://f33ot1.github.io/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/">
+  <meta property="og:site_name" content="f33ot1">
+  <meta property="og:title" content="Using .net reflection with Powershell to invoke a method in .NET">
+  <meta property="og:description" content="Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="projects">
+    <meta property="article:published_time" content="2025-11-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-27T00:00:00+00:00">
+    <meta property="article:tag" content="Reverse-Engineering">
+    <meta property="article:tag" content="Malware">
+    <meta property="article:tag" content="Dotnet">
+    <meta property="article:tag" content="Windows">
+    <meta property="article:tag" content="Dnspy">
+    <meta property="article:tag" content="Powershell">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Using .net reflection with Powershell to invoke a method in .NET">
+<meta name="twitter:description" content="Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://f33ot1.github.io/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Using .net reflection with Powershell to invoke a method in .NET",
+      "item": "https://f33ot1.github.io/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Using .net reflection with Powershell to invoke a method in .NET",
+  "name": "Using .net reflection with Powershell to invoke a method in .NET",
+  "description": "Learn how to use Powershell and Reflection API to invoke methods from .NET Assemblies",
+  "keywords": [
+    "reverse-engineering", "malware", "dotnet", "windows", "dnspy", "powershell"
+  ],
+  "articleBody": "Overview The malicious sample [hash] I am analyzing in dnSpy remains heavily obfuscated. Rather than relying solely on static analysis and assumptions about the code’s behavior, I can use Poweshell in conjunction with .NET Reflection API to invoke methods directly from imported assemblies.\nIn Part 1, I briefly describe the important concepts that will be explored in the article.\nPART 1: THE CONCEPTS Here’s a high level diagram.\nHow to load an assembly using PowerShell A .NET assembly is a compiled file that contains code, typically in one of the following formats:\n.dll (most common for libraries) .exe (can also be loaded as an assembly) When importing (or loading) an assembly, its compiled classes and methods are made available in memory, allowing interaction with them at runtime.\nIn PowerShell, this can be done with:\nAdd-Type -Path \"C:\\path\\to\\dotnetmalware.dll\" Reflection in .NET Assemblies contain modules, modules contain types, and types contain members. Reflection provides objects that encapsulate assemblies, modules, and types. Reflection allows one part of a program to dynamically query and invoke another, in terms of assemblies, types, and members.\nThe classes in the System.Reflection namespace, together with System.Type, allow us to:\nObtain information about loaded assemblies and the types defined within them, such as classes, interfaces, and value types (structures and enumerations).\nCreate type instances at runtime, and invoke or access their members.\nCreate an instance of a type, bind the type to an existing object, or get the type from an existing object. Then, the user can invoke the type’s methods or access its fields and properties.\nThe System.Type class is central to reflection. The common language runtime creates the Type for a loaded type when reflection requests it. You can use a Type object’s methods, fields, properties, and nested classes to find out everything about that type.\nPART 2: THE METHOD #Load the assemby (.exe or .dll) $AssemblyName = \"ReflectionAPI.exe\" [Reflection.Assembly]::LoadFile($AssemblyName) | Out-Null #Get the ReflectionUsage class Format: [namespace.class] $class = [ReflectionAPI.ReflectionUsage] #Call the static method 'yourmethod' with the input \"yourinput\" $returnYourOutPut = $class::CLASSNAME(\"yourinput\") Write-Output $returnYourOutPut PART 3: CODE The class to be analysed: From the code:\nClass name: Class238 Namespace: none (global namespace) Method: smethod_0 Signature: public static string smethod_0(int int_0) **# Load the assembly (.exe or .dll)** $AssemblyPath = \"C:\\Users\\windows\\Documents\\analysis\\purelogsstealer\\sample\\payload_Slayead-cleaned.exe\" $asm = [System.Reflection.Assembly]::LoadFrom($AssemblyPath) **# Get the Class238 type (global name space) ** $type = $asm.GetType(\"Class238\") **# Call the public static method smethod_0 with integer 0** $returnString = $type::smethod_0(0) Write-Output \"Returned smethod_0 Method:\" Write-Output $returnString RESULTS I had previously applied .NET Reactor Slayer, and when I opened the file in dnSpy, I was able to see some level of corruption in the assembly, which led me to believe that the assembly might not load. As expected, during the execution of Step 1, Load the assembly the assembly file was not recognized as a valid .NET assembly for execution.\nRe-applying .NET Reactor Slayer I will reapply .NET Reactor Slayer to the original obfuscated sample in an attempt to minimize corruption of the assembly and then retry loading it.\nI attempted to select as few items as possible from the .NET Reactor Slayer GUI list. Regardless of which or how many items I selected, the result was the same: the assembly appears to be corrupted to the point that it cannot be loaded in PowerShell.\nBelow is a comparison between attempting to load the payload into memory before using .NET Reactor Slayer versus after its utilization.\nBefore After These results have been consistent across trials, which suggests that the use of .NET Reactor Slayer on the analyzed binary itself causes partial corruption of the assembly.\nContribution This portfolio is maintained as part of my learning journey as a student in cybersecurity and malware reverse engineering. While I strive for accuracy and clarity, some content may contain errors or be incomplete.\nIf you notice any issues, have suggestions for improvement, or would like to contribute, please feel free to reach out to me at f33ot1@gmail.com. Feedback is always welcome and appreciated.\nReferences https://systemweakness.com/invoke-methods-from-net-assemblies-using-powershell-and-reflection-api-4d8e3e9e93b2 https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/reflection https://learn.microsoft.com/en-us/dotnet/fundamentals/reflection/viewing-type-information ",
+  "wordCount" : "665",
+  "inLanguage": "en",
+  "datePublished": "2025-11-27T00:00:00Z",
+  "dateModified": "2025-11-27T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "f33ot1"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://f33ot1.github.io/projects/using-.net-reflection-with-powershell-to-invoke-a-method-in-.net/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "f33ot1",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://f33ot1.github.io/favicon.ico"
+    }
+  }
+}
 </script>
 </head>
 <body id="top">
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="f33ot1 (Alt + H)">f33ot1</a>
+            <a href="https://f33ot1.github.io/" accesskey="h" title="f33ot1 (Alt + H)">f33ot1</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -65,22 +137,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/about/" title="about">
+                <a href="https://f33ot1.github.io/about/" title="about">
                     <span>about</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/contact/" title="contact">
+                <a href="https://f33ot1.github.io/contact/" title="contact">
                     <span>contact</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/projects/" title="projects">
+                <a href="https://f33ot1.github.io/projects/" title="projects">
                     <span>projects</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/learning/" title="learning">
+                <a href="https://f33ot1.github.io/learning/" title="learning">
                     <span>learning</span>
                 </a>
             </li>
@@ -193,19 +265,19 @@ As expected, during the execution of Step 1, <strong>Load the assembly</strong> 
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/reverse-engineering/">Reverse-Engineering</a></li>
-      <li><a href="http://localhost:1313/tags/malware/">Malware</a></li>
-      <li><a href="http://localhost:1313/tags/dotnet/">Dotnet</a></li>
-      <li><a href="http://localhost:1313/tags/windows/">Windows</a></li>
-      <li><a href="http://localhost:1313/tags/dnspy/">Dnspy</a></li>
-      <li><a href="http://localhost:1313/tags/powershell/">Powershell</a></li>
+      <li><a href="https://f33ot1.github.io/tags/reverse-engineering/">Reverse-Engineering</a></li>
+      <li><a href="https://f33ot1.github.io/tags/malware/">Malware</a></li>
+      <li><a href="https://f33ot1.github.io/tags/dotnet/">Dotnet</a></li>
+      <li><a href="https://f33ot1.github.io/tags/windows/">Windows</a></li>
+      <li><a href="https://f33ot1.github.io/tags/dnspy/">Dnspy</a></li>
+      <li><a href="https://f33ot1.github.io/tags/powershell/">Powershell</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">f33ot1</a></span> · 
+        <span>&copy; 2026 <a href="https://f33ot1.github.io/">f33ot1</a></span> · 
 
     <span>
         Powered by
